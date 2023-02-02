@@ -1,3 +1,3 @@
 <?php
 
-phpinfo();
+echo "I'm a big fan of the Simpsons";
