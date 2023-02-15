@@ -33,6 +33,7 @@ $all_users = $stmt->fetchAll();
             <th>Email</th>
             <th>Password</th>
             <th>IP Address</th>
+            <th>Verwijder</th>
         </tr>
         <?php foreach ($all_users as $user) : ?>
             <tr>
@@ -42,8 +43,9 @@ $all_users = $stmt->fetchAll();
                 <td><?php echo $user["email"] ?></td>
                 <td><?php echo $user["password"] ?></td>
                 <td><?php echo $user["ip_address"] ?></td>
+                <td><a href="users_delete.php?id=<?php echo $user["id"] ?>">Delete</a></td>
                 <td>
-                    <a href="users_show.php?user_id=<?php echo $user["id"] ?>">Bekijk Detail</a>
+                    <a href="users_show.php?id=<?php echo $user["id"] ?>">Bekijk Detail</a>
                 </td>
             <?php endforeach; ?>
             </tr>

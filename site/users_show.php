@@ -1,7 +1,7 @@
 <?php
 require 'database.php';
 
-$id = $_GET['user_id'];
+$id = $_GET['id'];
 $stmt = $conn->prepare("SELECT id, first_name, last_name, email, password, ip_address FROM users WHERE id = :id");
 $stmt->bindParam(':id', $id);
 $stmt->execute();
